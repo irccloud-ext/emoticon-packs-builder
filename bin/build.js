@@ -79,7 +79,7 @@ q.all([
 .then(function () {
   var saves = [];
   Object.keys(emotesLoaded).forEach(function (key) {
-    saves.push(save(`${destFolder}${key}.json`, emotesLoaded[key]));
+    saves.push(save(`${destFolder}${key}.json`, emotesLoaded[key], true));
   });
   return q.all(saves);
 }).then(function () {
